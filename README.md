@@ -1,28 +1,30 @@
-﻿#  AI & LLM  Handy Tools
+﻿# AI & LLM Handy Tools
 
-A comprehensive toolkit of essential cybersecurity tools for students and professionals. Built with Next.js 14, TypeScript, and Tailwind CSS.
+Practical utilities for AI engineers, researchers, and prompt engineers. A comprehensive toolkit built with Next.js 14, TypeScript, and Tailwind CSS.
 
-##  Features
+## Features
 
-- ** Cryptography Tools**: Hash calculators, JWT decoders, password utilities
-- ** Network Analysis**: DNS lookups, SSL certificate checks, port scanning
-- ** Threat Intelligence**: IOC extraction, CVE lookups, threat intel checks
-- ** Analysis Tools**: Log parsing, PCAP analysis, timestamp conversion
-- ** Testing & Payloads**: XSS/SQLi payloads, security cheatsheets
+- **Prompt Engineering**: Templates, A/B testing, context trimming, and leakage detection.
+- **Model Training & Evaluation**: Dataset cleaning, fine-tune config generation, and training cost estimation.
+- **Dataset Tools**: Text labeling, JSONL conversion, embedding visualization, and bias detection.
+- **MLOps & Inference**: API testing, latency checking, and streaming output visualization.
+- **Safety & Alignment**: Jailbreak testing, toxicity classification, and hallucination checking.
+- **AI Agents & Workflows**: Agent flow visualization, RAG building, and tool use simulation.
+- **Security & Utilities**: Cryptography, network analysis, and threat intelligence tools.
 
-##  Quick Start
+## Quick Start
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/cybersecurity-handy-tools.git
-cd cybersecurity-handy-tools
+git clone https://github.com/carthworks/aitoolsbox.git
+cd aitoolsbox-io
 
 # Install dependencies
 npm install
@@ -33,36 +35,54 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-##  Available Tools
+## Available Tools
 
-### Cryptography
-- **Hash Tools**: MD5, SHA1, SHA256, SHA512 calculators + identifier
-- **JWT Decoder**: Decode and verify JSON Web Tokens
-- **Password Utilities**: Strength checker and secure generator
+### Prompt Engineering
+- **Prompt Template Builder**: Create reusable structured prompts (system + user + examples).
+- **Prompt A/B Tester**: Compare model responses across prompt variations.
+- **Context Trimmer**: Automatically shorten context to stay under token limits.
+- **Prompt Leakage Detector**: Detect system prompt exposure or overfitting.
+- **Persona Simulator**: Emulate model behavior under various personas.
 
-### Network Analysis
-- **IP & DNS Toolkit**: GeoIP lookup, DNS records (A, MX, TXT, NS), reverse DNS
-- **SSL/TLS Checker**: Certificate expiry, issuer, cipher strength
-- **Port Check**: TCP service reachability testing
-- **HTTP Headers**: CORS & CSP policy analysis
+### Model Training & Evaluation
+- **Dataset Cleaner**: Remove duplicates, bad tokens, or offensive samples.
+- **Fine-Tune Config Generator**: Generate LoRA, PEFT, or RLHF JSON config templates.
+- **Training Cost Estimator**: Estimate GPU hours and token cost for training.
+- **Model Comparison Viewer**: Compare outputs from multiple LLMs side-by-side.
+- **Evaluation Benchmark Suite**: Evaluate accuracy, coherence, toxicity, and bias.
 
-### Threat Intelligence
-- **IOC Extractor**: Extract IPs, URLs, hashes, emails from text
-- **CVE Lookup**: Fetch vulnerability details from CIRCL CVE API
-- **Threat Intel Check**: VirusTotal/AbuseIPDB integration (with API keys)
-- **WHOIS/RDAP**: Domain and IP ownership lookup
+### Dataset Tools
+- **Text Dataset Labeler**: Manual or semi-auto text classification tool.
+- **Text → JSONL Converter**: Prepare datasets for OpenAI / HuggingFace training.
+- **Embedding Visualizer**: Plot sentence embeddings in 2D/3D using PCA/UMAP.
+- **Bias Detector**: Identify gender, racial, or cultural bias in text.
+- **Token Counter**: Estimate token usage and costs before training.
 
-### Analysis Tools
-- **Log Beautifier**: Format JSON, Apache, Nginx, Syslog
-- **PCAP Decoder**: View packet timestamps, sizes, hex data
-- **Timestamp Converter**: Unix  Human-readable time
-- **Subdomain Finder**: Dictionary-based subdomain enumeration
+### MLOps & Inference
+- **API Tester**: Send test prompts to OpenAI, Ollama, Anthropic, Mistral, etc.
+- **Latency Checker**: Compare response times across models or regions.
+- **Streaming Output Visualizer**: Watch token-by-token generation in real time.
+- **Inference Log Analyzer**: Track drift, anomalies, and token usage metrics.
+- **Model Deployment Tracker**: Monitor and version deployed models.
 
-### Testing & Payloads
-- **XSS/SQLi Payloads**: HTML entities, URL encoding, JS encoding + test payloads
-- **Cheatsheets**: OWASP Top 10, MITRE ATT&CK quick reference
+### Safety & Alignment
+- **Jailbreak Tester**: Evaluate prompt-injection and system override attempts.
+- **Toxicity Classifier**: Detect harmful or biased language in model outputs.
+- **Hallucination Checker**: Compare generated output with factual references.
+- **Alignment Score Tracker**: Rate model safety, honesty, and relevance.
 
-##  Configuration
+### AI Agents & Workflows
+- **Agent Flow Visualizer**: Visualize task-chains and tool-use flows.
+- **Task Memory Tester**: Evaluate how well an agent retains prior context.
+- **RAG Builder**: Connect documents → embeddings → LLM for retrieval QA.
+- **Tool Use Simulator**: Simulate agent reasoning and tool calls.
+
+### Security & Utilities
+- **Cryptography**: Hash calculators, JWT decoders, password utilities.
+- **Network Analysis**: DNS lookups, SSL checks, port scanning.
+- **Threat Intelligence**: IOC extraction, CVE lookups, threat intel checks.
+
+## Configuration
 
 ### Environment Variables
 
@@ -74,36 +94,23 @@ VT_API_KEY=your_virustotal_api_key
 
 # Optional: AbuseIPDB API key for IP reputation
 ABUSEIPDB_KEY=your_abuseipdb_api_key
+
+# Optional: OpenAI API Key for AI tools
+OPENAI_API_KEY=your_openai_api_key
 ```
 
-### API Keys Setup
-
-1. **VirusTotal**: Get free API key at [virustotal.com](https://www.virustotal.com/)
-2. **AbuseIPDB**: Get free API key at [abuseipdb.com](https://www.abuseipdb.com/)
-
-##  Project Structure
+## Project Structure
 
 ```
-cybersecurity-handy-tools/
+aitoolsbox-io/
  app/
     api/                 # API routes
-       hash/           # Hash calculation
-       jwt/            # JWT decoding
-       dns/            # DNS lookups
-       ssl/            # SSL certificate checks
-       ...
-    hash/               # Hash tools page
-    jwt/                # JWT decoder page
-    about/              # About page
-    contact/            # Contact page
-    tools/              # All tools overview
- components/
-    Section.tsx         # Reusable section component
-    Navigation.tsx      # Header navigation
- public/                 # Static assets
+    components/          # Reusable components
+    public/              # Static assets
+    ...                  # Tool pages
 ```
 
-##  Deployment
+## Deployment
 
 ### Vercel (Recommended)
 
@@ -119,94 +126,25 @@ vercel
 
 ```bash
 # Build Docker image
-docker build -t cybersecurity-tools .
+docker build -t aitoolsbox .
 
 # Run container
-docker run -p 3000:3000 cybersecurity-tools
+docker run -p 3000:3000 aitoolsbox
 ```
 
-### Manual Deployment
-
-```bash
-# Build for production
-npm run build
-
-# Start production server
-npm start
-```
-
-##  Development
-
-### Scripts
-
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start         # Start production server
-npm run lint         # Run ESLint
-```
-
-### Adding New Tools
-
-1. Create new page in `app/[tool-name]/page.tsx`
-2. Add API route in `app/api/[tool-name]/route.ts` if needed
-3. Update navigation in `components/Navigation.tsx`
-4. Add to tools list in `app/tools/page.tsx`
-
-##  Privacy & Security
-
-- **Client-side Processing**: Most tools run entirely in the browser
-- **No Data Storage**: No user data is stored or tracked
-- **Open Source**: Full transparency with public codebase
-- **API Keys**: Optional external API integrations only
-
-##  Contributing
+## Contributing
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md).
 
-### Development Setup
-
-```bash
-# Fork and clone the repository
-git clone https://github.com/your-username/cybersecurity-handy-tools.git
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-### Submitting Changes
-
-1. Create a feature branch
-2. Make your changes
-3. Test thoroughly
-4. Submit a pull request
-
-##  License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-##  Acknowledgments
+## Support
 
-- [OWASP](https://owasp.org/) for security guidelines
-- [MITRE ATT&CK](https://attack.mitre.org/) for threat intelligence framework
-- [CIRCL](https://www.circl.lu/) for CVE database
-- [VirusTotal](https://www.virustotal.com/) for threat intelligence
-- [AbuseIPDB](https://www.abuseipdb.com/) for IP reputation
-
-##  Support
-
-- **Documentation**: [GitHub Wiki](https://github.com/your-username/cybersecurity-handy-tools/wiki)
-- **Issues**: [GitHub Issues](https://github.com/your-username/cybersecurity-handy-tools/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-username/cybersecurity-handy-tools/discussions)
+- **Issues**: [GitHub Issues](https://github.com/carthworks/aitoolsbox/issues)
 - **Email**: tkarthikeyan@gmail.com
-
-##  Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=your-username/cybersecurity-handy-tools&type=Date)](https://star-history.com/#your-username/cybersecurity-handy-tools&Date)
 
 ---
 
-**Built with  for the cybersecurity community**
+**Built with ❤️ for the AI community**
