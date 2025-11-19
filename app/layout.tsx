@@ -11,8 +11,8 @@ const ViewTicker = dynamic(() => import("../components/ViewTicker"), { ssr: fals
 
 
 export const metadata = {
-  title: "Cybersecurity Handy Tools",
-  description: "Free, privacy-friendly tools and utilities for security students and professionals — ASN lookup, CVE lookup, hash tools, network analysis, and more.",
+  title: "AI & LLM Handy Tools",
+  description: "Practical utilities for AI engineers, researchers and prompt engineers, and more.",
   keywords: [
     "cybersecurity tools",
     "ASN lookup",
@@ -125,8 +125,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
 
       <body className="bg-white text-slate-800">
-        <SpeedInsights/>
-        <Analytics/>
+        <SpeedInsights />
+        <Analytics />
         <Navigation />
         <main className="container-page py-8">{children}</main>
 
@@ -134,7 +134,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <div className="container-page py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
             <p>
               ⚡ Built for learning. No tracking. All processing runs client-side unless a checker needs a public API.
-               <ViewTicker />
+              <ViewTicker />
             </p>
             <div className="flex gap-4">
               <a href="/" className="hover:bg-slate-50" title="Home" aria-label="Home">
@@ -143,14 +143,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <a href="/about" className="hover:text-slate-700">About</a>
               <a href="/privacy" className="hover:text-slate-700">Privacy</a>
               <a href="https://github.com/carthworks" target="_blank" rel="noreferrer" className="hover:text-slate-700">GitHub</a>
-             
             </div>
-
-
           </div>
-                      {/* <div className="mt-3 sm:mt-0 w-full">
-
-</div> */}
         </footer>
       </body>
     </html>
