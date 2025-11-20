@@ -28,7 +28,7 @@ import { Brain, Beaker, GraduationCap, Cpu, Bot, Database } from "lucide-react";
 
 
 
-export const categories: Category[] = [
+const categories: Category[] = [
   {
     title: "Prompt Engineering",
     icon: Brain,
@@ -39,7 +39,7 @@ export const categories: Category[] = [
       { slug: "context-trimmer", title: "Context Trimmer", desc: "Automatically shorten context to stay under token limits.", isPublish: false },
       { slug: "prompt-leak", title: "Prompt Leakage Detector", desc: "Detect system prompt exposure or overfitting.", isPublish: false },
       { slug: "persona-lab", title: "Persona Simulator", desc: "Emulate model behavior under various personas.", isPublish: true },
-      { slug: "prompt-shortcut", title: "Prompt Shortcuts", desc: "prompt-shortcut", isPublish: true }
+      { slug: "prompt-shortcut", title: "Prompt Shortcuts", desc: "prompt-shortcut", isPublish: true },
       // { slug: "hash", title: "Hash Tools", desc: "MD5, SHA1, SHA256, SHA512", isPublish: true },
       // { slug: "jwt", title: "JWT Decoder", desc: "Decode and verify JWTs", isPublish: true },
       // { slug: "jwt-cracker", title: "JWT Cracker", desc: "Test weak signing keys", isPublish: false },
