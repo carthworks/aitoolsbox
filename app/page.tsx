@@ -39,6 +39,7 @@ export const categories: Category[] = [
       { slug: "context-trimmer", title: "Context Trimmer", desc: "Automatically shorten context to stay under token limits.", isPublish: false },
       { slug: "prompt-leak", title: "Prompt Leakage Detector", desc: "Detect system prompt exposure or overfitting.", isPublish: false },
       { slug: "persona-lab", title: "Persona Simulator", desc: "Emulate model behavior under various personas.", isPublish: true },
+      { slug: "prompt-shortcut", title: "Prompt Shortcuts", desc: "prompt-shortcut", isPublish: true }
       // { slug: "hash", title: "Hash Tools", desc: "MD5, SHA1, SHA256, SHA512", isPublish: true },
       // { slug: "jwt", title: "JWT Decoder", desc: "Decode and verify JWTs", isPublish: true },
       // { slug: "jwt-cracker", title: "JWT Cracker", desc: "Test weak signing keys", isPublish: false },
@@ -122,15 +123,12 @@ export const categories: Category[] = [
     icon: GraduationCap,
     color: "bg-green-200",
     tools: [
+      { slug: "ai-glossary", title: "AI & LLM Glossary", desc: "Interactive glossary of essential AI/ML/LLM terminology with examples.", isPublish: true },
+      { slug: "model-comparison", title: "LLM Model Comparison", desc: "Compare popular language models by cost, context, and capabilities.", isPublish: true },
       { slug: "ai-tips", title: "Daily AI Concepts", desc: "Flashcards with short explanations of key AI terms.", isPublish: true },
       { slug: "prompt-labs", title: "Prompt Engineering Playground", desc: "Interactive tutorials for writing better prompts.", isPublish: true },
-      { slug: "ai-papers", title: "AI Paper Digest", desc: "Summaries of top LLM research papers weekly.", isPublish: false },
       { slug: "model-explorer", title: "Model Explorer", desc: "Discover and compare open models from HF/Ollama.", isPublish: true },
-      { slug: "shortcut-prompt", title: "PromptShortcuts", desc: "shortcut prompt.", isPublish: true },
-      { slug: "wordlist", title: "Wordlist Generator", desc: "Custom password/wordlists", isPublish: true },
-      { slug: "xxe", title: "XXE Payload Generator", desc: "XML external entity injection payloads", isPublish: false },
-      { slug: "jwt-fuzzer", title: "JWT Fuzzer", desc: "Tweak claims and signatures", isPublish: false },
-      { slug: "command-injection", title: "Command Injection Tester", desc: "Common OS injection payloads", isPublish: false },
+      { slug: "ai-papers", title: "AI Paper Digest", desc: "Summaries of top LLM research papers weekly.", isPublish: false },
     ],
   },
   {
@@ -147,18 +145,18 @@ export const categories: Category[] = [
       { slug: "csrf", title: "CSRF Token Inspector", desc: "Check CSRF token presence & randomness", isPublish: false },
     ],
   },
-  {
-    title: "Learning",
-    icon: Code,
-    color: "bg-green-50",
-    tools: [
-      { slug: "tips", title: "Daily Security Tips", desc: "Flashcards & rotating advice", isPublish: true },
-      { slug: "prompt-shortcut", title: "Prompt Shortcuts", desc: "prompt-shortcut", isPublish: true },
-      // { slug: "ctf-mini", title: "CTF Mini Challenges", desc: "Small interactive labs & puzzles", isPublish: false },
-      // { slug: "vuln-demos", title: "Vulnerability Demos", desc: "Learn XSS, SQLi, SSRF interactively", isPublish: false },
-      { slug: "tts", title: "Text → Voice (TTS)", desc: "Convert text into spoken audio in the browser. Play, pause, tweak voice/pitch/rate, and export text (audio export requires server-side TTS).", isPublish: true },
-    ],
-  },
+  // {
+  //   title: "Learning",
+  //   icon: Code,
+  //   color: "bg-green-50",
+  //   tools: [
+  //     { slug: "tips", title: "Daily Security Tips", desc: "Flashcards & rotating advice", isPublish: true },
+  //     // { slug: "prompt-shortcut", title: "Prompt Shortcuts", desc: "prompt-shortcut", isPublish: true },
+  //     // { slug: "ctf-mini", title: "CTF Mini Challenges", desc: "Small interactive labs & puzzles", isPublish: false },
+  //     // { slug: "vuln-demos", title: "Vulnerability Demos", desc: "Learn XSS, SQLi, SSRF interactively", isPublish: false },
+  //     // { slug: "tts", title: "Text → Voice (TTS)", desc: "Convert text into spoken audio in the browser. Play, pause, tweak voice/pitch/rate, and export text (audio export requires server-side TTS).", isPublish: true },
+  //   ],
+  // },
 ];
 
 

@@ -138,15 +138,12 @@ export const categories: Category[] = [
     icon: GraduationCap,
     color: "bg-green-200",
     tools: [
+      { slug: "ai-glossary", title: "AI & LLM Glossary", desc: "Interactive glossary of essential AI/ML/LLM terminology with examples.", isPublish: true },
+      { slug: "model-comparison", title: "LLM Model Comparison", desc: "Compare popular language models by cost, context, and capabilities.", isPublish: true },
       { slug: "ai-tips", title: "Daily AI Concepts", desc: "Flashcards with short explanations of key AI terms.", isPublish: true },
       { slug: "prompt-labs", title: "Prompt Engineering Playground", desc: "Interactive tutorials for writing better prompts.", isPublish: true },
-      { slug: "ai-papers", title: "AI Paper Digest", desc: "Summaries of top LLM research papers weekly.", isPublish: false },
       { slug: "model-explorer", title: "Model Explorer", desc: "Discover and compare open models from HF/Ollama.", isPublish: true },
-      { slug: "shortcut-prompt", title: "PromptShortcuts", desc: "shortcut prompt.", isPublish: true },
-      { slug: "wordlist", title: "Wordlist Generator", desc: "Custom password/wordlists", isPublish: true },
-      { slug: "xxe", title: "XXE Payload Generator", desc: "XML external entity injection payloads", isPublish: false },
-      { slug: "jwt-fuzzer", title: "JWT Fuzzer", desc: "Tweak claims and signatures", isPublish: false },
-      { slug: "command-injection", title: "Command Injection Tester", desc: "Common OS injection payloads", isPublish: false },
+      { slug: "ai-papers", title: "AI Paper Digest", desc: "Summaries of top LLM research papers weekly.", isPublish: false },
     ],
   },
   {
