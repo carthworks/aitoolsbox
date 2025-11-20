@@ -83,10 +83,12 @@ export const categories: Category[] = [
     color: "bg-purple-200",
     tools: [
       { slug: "text-labeler", title: "Text Dataset Labeler", desc: "Manual or semi-auto text classification tool.", isPublish: true },
+      { slug: "jsonl-validator", title: "JSONL Validator & Formatter", desc: "Validate and format datasets for OpenAI/HuggingFace fine-tuning.", isPublish: true },
       { slug: "jsonl-converter", title: "Text → JSONL Converter", desc: "Prepare datasets for OpenAI / HuggingFace training.", isPublish: true },
       { slug: "embedding-visualizer", title: "Embedding Visualizer", desc: "Plot sentence embeddings in 2D/3D using PCA/UMAP.", isPublish: true },
       { slug: "bias-detector", title: "Bias Detector", desc: "Identify gender, racial, or cultural bias in text.", isPublish: true },
       { slug: "token-counter", title: "Token Counter", desc: "Estimate token usage and costs before training.", isPublish: true },
+      { slug: "rag-chunking", title: "RAG Chunking Visualizer", desc: "Visualize text splitting for RAG pipelines.", isPublish: true },
     ],
   },
   {
