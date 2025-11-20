@@ -159,6 +159,44 @@ const categories: Category[] = [
   // },
 ];
 
+// Helper function to check if tool folder exists
+// This runs client-side by attempting to fetch the route
+async function checkToolExists(slug: string): Promise<boolean> {
+  try {
+    const response = await fetch(`/${slug}`, { method: 'HEAD' });
+    return response.ok;
+  } catch {
+    return false;
+  }
+}
+
+// Update categories with folder existence check
+// This will set isPublish to false for tools without folders
+const getCategoriesWithExistenceCheck = (): Category[] => {
+  // Known existing folders (from directory listing)
+  const existingFolders = new Set([
+    'about', 'ai-glossary', 'api', 'asn', 'aws-s3', 'bias-detector', 'cert-parser',
+    'certificate-parser', 'cheatsheets', 'cidr', 'contact', 'cve', 'cve-feed', 'cvss',
+    'dataset-cleaner', 'device-info', 'email-analyzer', 'embedding-visualizer', 'exif',
+    'finetune-config', 'hash', 'hash-id', 'headers', 'headers-check', 'ioc', 'ip-dns',
+    'json-xml', 'jsonl-validator', 'jwt', 'logs', 'model-comparison', 'network-tool',
+    'obfuscator', 'password', 'password-strength', 'payloads', 'pcap', 'port', 'privacy',
+    'prompt-shortcut', 'qr-code-check', 'rag-chunking', 'regex', 'sho', 'shortcut-prompt',
+    'ssl', 'subdomain', 'text-labeler', 'threat', 'timestamp', 'tips', 'token-counter',
+    'tools', 'tts', 'url-trace', 'web-security-scan', 'whois', 'wordlist'
+  ]);
+
+  return categories.map(category => ({
+    ...category,
+    tools: category.tools.map(tool => ({
+      ...tool,
+      // Set isPublish to false if folder doesn't exist, regardless of original value
+      isPublish: tool.isPublish && existingFolders.has(tool.slug)
+    }))
+  }));
+};
+
+
 
 
 /* ---------- helpers ---------- */
@@ -212,9 +250,12 @@ export default function HomePage() {
   const [favorites, setFavorites] = useState<string[]>([]); // load on mount
   const [recent, setRecent] = useState<string[]>([]); // load on mount
 
+  // Use validated categories with folder existence check
+  const validatedCategories = useMemo(() => getCategoriesWithExistenceCheck(), []);
+
   // UI state
   const [openCategories, setOpenCategories] = useState<Record<string, boolean>>(() =>
-    categories.reduce<Record<string, boolean>>((acc, c, idx) => {
+    validatedCategories.reduce<Record<string, boolean>>((acc, c, idx) => {
       acc[c.title] = idx < 2;
       return acc;
     }, {})
@@ -285,7 +326,7 @@ export default function HomePage() {
   }, []);
 
   // derive flat tools and tags
-  const allToolsFlat: Tool[] = useMemo(() => categories.flatMap((c) => c.tools), []);
+  const allToolsFlat: Tool[] = useMemo(() => validatedCategories.flatMap((c) => c.tools), [validatedCategories]);
   const allTags = useMemo(() => {
     const s = new Set<string>();
     allToolsFlat.forEach((t) => toolTags(t.slug).forEach((tg) => s.add(tg)));
@@ -319,7 +360,7 @@ export default function HomePage() {
   // filtering logic
   const filteredCategories = useMemo(
     () =>
-      categories
+      validatedCategories
         .map((cat) => ({
           ...cat,
           tools: cat.tools.filter((t) => {
@@ -333,7 +374,7 @@ export default function HomePage() {
           }),
         }))
         .filter((cat) => (cat.tools || []).length > 0),
-    [query, activeTagFilters]
+    [query, activeTagFilters, validatedCategories]
   );
 
   const favoritesResolved = (favorites || [])
@@ -384,7 +425,7 @@ export default function HomePage() {
               <div className="text-xs text-slate-500">Jump</div>
             </div>
             <div className="mt-3 space-y-2">
-              {categories.map((c) => (
+              {validatedCategories.map((c) => (
                 <button
                   key={c.title}
                   onClick={() => scrollToCategory(c.title)}
