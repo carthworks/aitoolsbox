@@ -149,6 +149,23 @@ export const categories: Category[] = [
     ],
   },
   {
+    title: "LLM Security & Red Teaming",
+    icon: Shield,
+    color: "bg-red-200",
+    tools: [
+      { slug: "jailbreak-tester", title: "Jailbreak Attack Tester", desc: "Test LLMs with jailbreak prompts (DAN, evil mode, role-play attacks).", isPublish: true },
+      { slug: "prompt-injection-attack", title: "Prompt Injection Attack Lab", desc: "Craft and test prompt injection attacks (indirect, context hijacking).", isPublish: false },
+      { slug: "adversarial-suffix", title: "Adversarial Suffix Generator", desc: "Generate adversarial suffixes to bypass safety filters.", isPublish: false },
+      { slug: "model-extraction", title: "Model Extraction Simulator", desc: "Simulate model extraction attacks via API queries.", isPublish: false },
+      { slug: "membership-inference", title: "Membership Inference Attack", desc: "Test if specific data was in the training set.", isPublish: false },
+      { slug: "backdoor-trigger", title: "Backdoor Trigger Detector", desc: "Detect potential backdoor triggers in model behavior.", isPublish: false },
+      { slug: "prompt-leakage", title: "System Prompt Leakage Tester", desc: "Attempt to extract system prompts from LLM responses.", isPublish: false },
+      { slug: "token-smuggling", title: "Token Smuggling Attack", desc: "Test token-level attacks and encoding exploits.", isPublish: false },
+      { slug: "context-overflow", title: "Context Window Overflow", desc: "Test model behavior with context window overflow attacks.", isPublish: false },
+      { slug: "multi-turn-attack", title: "Multi-Turn Attack Simulator", desc: "Chain multiple prompts to bypass safety mechanisms.", isPublish: false },
+    ],
+  },
+  {
     title: "Web & Cloud Security",
     icon: Cloud,
     color: "bg-pink-50",

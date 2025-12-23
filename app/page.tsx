@@ -147,7 +147,7 @@ const categories: Category[] = [
     icon: Shield,
     color: "bg-red-200",
     tools: [
-      { slug: "jailbreak-tester", title: "Jailbreak Attack Tester", desc: "Test LLMs with jailbreak prompts (DAN, evil mode, role-play attacks).", isPublish: false },
+      { slug: "jailbreak-tester", title: "Jailbreak Attack Tester", desc: "Test LLMs with jailbreak prompts (DAN, evil mode, role-play attacks).", isPublish: true },
       { slug: "prompt-injection-attack", title: "Prompt Injection Attack Lab", desc: "Craft and test prompt injection attacks (indirect, context hijacking).", isPublish: false },
       { slug: "adversarial-suffix", title: "Adversarial Suffix Generator", desc: "Generate adversarial suffixes to bypass safety filters.", isPublish: false },
       { slug: "model-extraction", title: "Model Extraction Simulator", desc: "Simulate model extraction attacks via API queries.", isPublish: false },
@@ -193,7 +193,7 @@ const getCategoriesWithExistenceCheck = (): Category[] => {
     'certificate-parser', 'cheatsheets', 'cidr', 'content-moderation', 'cve', 'cve-feed', 'cvss',
     'dataset-cleaner', 'device-info', 'email-analyzer', 'embedding-visualizer', 'exif',
     'finetune-config', 'hash', 'hash-id', 'headers', 'headers-check', 'how-to-use', 'ioc', 'ip-dns',
-    'json-xml', 'jsonl-validator', 'jwt', 'logs', 'model-comparison', 'network-tool',
+    'jailbreak-tester', 'json-xml', 'jsonl-validator', 'jwt', 'logs', 'model-comparison', 'network-tool',
     'obfuscator', 'password', 'password-strength', 'payloads', 'pcap', 'port', 'privacy',
     'prompt-shortcut', 'prompt-template', 'qr-code-check', 'rag-chunking', 'regex', 'sho', 'shortcut-prompt',
     'ssl', 'subdomain', 'text-labeler', 'threat', 'timestamp', 'tips', 'token-counter',
