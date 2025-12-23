@@ -11,37 +11,44 @@ const ViewTicker = dynamic(() => import("../components/ViewTicker"), { ssr: fals
 
 
 export const metadata = {
-  title: "AI & LLM Handy Tools",
-  description: "Practical utilities for AI engineers, researchers and prompt engineers, and more.",
+  title: "AI & LLM Handy Tools - AIToolBox.io",
+  description: "Free, privacy-focused AI tools for engineers, researchers, and prompt engineers. API testing, content moderation, prompt templates, AI glossary, and more.",
   keywords: [
-    "cybersecurity tools",
-    "ASN lookup",
-    "ISP lookup",
-    "offline ASN",
-    "network tools",
-    "CVE lookup",
-    "hash tools",
-    "pcap decoder",
-    "web security tools",
-    "pentesting utilities",
-    "security learning",
-    "SOC tools",
-    "security education"
+    "AI tools",
+    "LLM tools",
+    "prompt engineering",
+    "AI API tester",
+    "content moderation",
+    "prompt template builder",
+    "AI glossary",
+    "token counter",
+    "model comparison",
+    "dataset tools",
+    "AI safety",
+    "prompt testing",
+    "OpenAI tools",
+    "Anthropic tools",
+    "AI development",
+    "machine learning tools",
+    "RAG tools",
+    "fine-tuning tools",
+    "AI research tools",
+    "privacy-focused AI"
   ].join(", "),
-  authors: [{ name: "SecuTools", url: "https://secutools.io" }],
-  creator: "SecuTools",
+  authors: [{ name: "Karthikeyan T", url: "https://aitoolbox.io" }],
+  creator: "Karthikeyan T",
   // NOTE: viewport removed from here (exported separately below)
   openGraph: {
-    title: "Cybersecurity Handy Tools — SecuTools",
-    description: "Free, privacy-friendly tools and utilities for security students and professionals.",
-    url: "https://secutools.io",
-    siteName: "SecuTools",
+    title: "AI & LLM Handy Tools — AIToolBox.io",
+    description: "Free, privacy-focused tools for AI engineers, researchers, and prompt engineers. Test APIs, moderate content, build prompts, and more.",
+    url: "https://aitoolbox.io",
+    siteName: "AIToolBox.io",
     images: [
       {
-        url: "https://secutools.io/og.png",
+        url: "https://aitoolbox.io/og.png",
         width: 1200,
         height: 630,
-        alt: "SecuTools — Cybersecurity Handy Tools"
+        alt: "AIToolBox.io — AI & LLM Handy Tools"
       }
     ],
     locale: "en_US",
@@ -49,10 +56,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cybersecurity Handy Tools",
-    description: "Free, privacy-friendly tools for students and professionals.",
-    images: ["https://secutools.io/og.png"],
-    creator: "@SecuTools"
+    title: "AI & LLM Handy Tools - AIToolBox.io",
+    description: "Free, privacy-focused tools for AI engineers and researchers. API testing, prompts, moderation & more.",
+    images: ["https://aitoolbox.io/og.png"],
+    creator: "@carthworks"
   }
 };
 
@@ -63,18 +70,18 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  const siteUrl = "https://secutools.io"; // <- replace with your real domain
+  const siteUrl = "https://aitoolbox.io"; // <- replace with your real domain
   const ogImage = `${siteUrl}/og.png`; // recommended 1200x630
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "url": siteUrl,
-    "name": "SecuTools",
-    "description": "Free, privacy-friendly tools and utilities for security students and professionals.",
+    "name": "AIToolBox.io",
+    "description": "Free, privacy-focused AI and LLM tools for engineers, researchers, and prompt engineers. Test APIs, moderate content, build prompts, analyze datasets, and more.",
     "publisher": {
       "@type": "Organization",
-      "name": "SecuTools",
+      "name": "AIToolBox.io",
       "url": siteUrl,
       "logo": {
         "@type": "ImageObject",
@@ -133,7 +140,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <footer className="border-t border-slate-200 bg-slate-50">
           <div className="container-page py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
             <p>
-              ⚡ Built for learning. No tracking. All processing runs client-side unless a checker needs a public API.
+              ⚡ Built for AI engineers. Privacy-focused. All processing runs client-side.
               <ViewTicker />
             </p>
             <div className="flex gap-4">
@@ -141,6 +148,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 Home
               </a>
               <a href="/about" className="hover:text-slate-700">About</a>
+              <a href="/how-to-use" className="hover:text-slate-700">How to Use</a>
               <a href="/privacy" className="hover:text-slate-700">Privacy</a>
               <a href="https://github.com/carthworks" target="_blank" rel="noreferrer" className="hover:text-slate-700">GitHub</a>
             </div>
