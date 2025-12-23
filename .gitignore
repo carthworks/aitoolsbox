@@ -92,6 +92,9 @@ Desktop.ini
 *.tmp
 *.temp
 .turbo
+*.node_modules
+*.md 
+
 
 # ============================================
 # Misc

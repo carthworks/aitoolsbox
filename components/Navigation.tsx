@@ -13,6 +13,7 @@ import {
   Search as IconSearch,
   Bell,
   Bookmark,
+  BookOpen,
   Sun,
   Moon,
   User,
@@ -544,8 +545,8 @@ export default function Navigation() {
             <Link href="/about" className="p-2 rounded hover:bg-slate-50" title="About" aria-label="About">
               <Info className="w-5 h-5 text-emerald-600" />
             </Link>
-            <Link href="/contact" className="p-2 rounded hover:bg-slate-50" title="Contact" aria-label="Contact">
-              <Mail className="w-5 h-5 text-rose-600" />
+            <Link href="/how-to-use" className="p-2 rounded hover:bg-slate-50" title="How to Use" aria-label="How to Use">
+              <BookOpen className="w-5 h-5 text-purple-600" />
             </Link>
             {/* <Link href="/news" className="p-2 rounded hover:bg-slate-50" title="News" aria-label="News">
               <Newspaper className="w-5 h-5 text-yellow-600" />
@@ -630,6 +631,7 @@ export default function Navigation() {
               </div>
             </div>
 
+
             <div className="space-y-3">
               <nav className="flex gap-2">
                 <Link href="/" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-slate-50">
@@ -637,6 +639,9 @@ export default function Navigation() {
                 </Link>
                 <Link href="/about" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-slate-50">
                   <Info className="w-5 h-5 text-emerald-600" /> About
+                </Link>
+                <Link href="/how-to-use" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-slate-50">
+                  <BookOpen className="w-5 h-5 text-purple-600" /> How to Use
                 </Link>
               </nav>
 

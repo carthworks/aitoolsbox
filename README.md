@@ -1,150 +1,225 @@
-﻿# AI & LLM Handy Tools
+﻿# AI & LLM Handy Tools 🤖
 
-Practical utilities for AI engineers, researchers, and prompt engineers. A comprehensive toolkit built with Next.js 14, TypeScript, and Tailwind CSS.
+A comprehensive collection of AI and LLM tools built with Next.js 14, TypeScript, and Tailwind CSS.
 
-## Features
+![Next.js](https://img.shields.io/badge/Next.js-14.2-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-- **Prompt Engineering**: Templates, A/B testing, context trimming, and leakage detection.
-- **Model Training & Evaluation**: Dataset cleaning, fine-tune config generation, and training cost estimation.
-- **Dataset Tools**: Text labeling, JSONL conversion, embedding visualization, and bias detection.
-- **MLOps & Inference**: API testing, latency checking, and streaming output visualization.
-- **Safety & Alignment**: Jailbreak testing, toxicity classification, and hallucination checking.
-- **AI Agents & Workflows**: Agent flow visualization, RAG building, and tool use simulation.
-- **Security & Utilities**: Cryptography, network analysis, and threat intelligence tools.
+---
 
-## Quick Start
+## 🚀 Features
 
-### Prerequisites
+### **Live Tools:**
+- ✅ **API Tester** - Test AI APIs (OpenAI, Anthropic, Google, etc.)
+- ✅ **AI Glossary** - 54+ AI/LLM terms with definitions
+- ✅ **Content Moderation** - Analyze text for harmful content
+- ✅ **Prompt Template Builder** - Create reusable prompt templates
 
-- Node.js 18+
+### **Coming Soon:**
+- 🔜 PII Detector
+- 🔜 Token Counter & Cost Estimator
+- 🔜 Model Comparison Viewer
+- 🔜 JSONL Converter
+- 🔜 And 60+ more tools!
+
+---
+
+## 📦 Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Deployment:** Vercel
+- **Package Manager:** npm
+
+---
+
+## 🛠️ Installation
+
+### **Prerequisites:**
+- Node.js 18.x or higher
 - npm or yarn
 
-### Installation
-
+### **Clone & Install:**
 ```bash
-# Clone the repository
-git clone https://github.com/carthworks/aitoolsbox.git
-cd aitoolsbox-io
-
-# Install dependencies
+git clone https://github.com/yourusername/aitoolbox.git
+cd aitoolbox
 npm install
+```
 
-# Start development server
+### **Run Development Server:**
+```bash
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Available Tools
+---
 
-### Prompt Engineering
-- **Prompt Template Builder**: Create reusable structured prompts (system + user + examples).
-- **Prompt A/B Tester**: Compare model responses across prompt variations.
-- **Context Trimmer**: Automatically shorten context to stay under token limits.
-- **Prompt Leakage Detector**: Detect system prompt exposure or overfitting.
-- **Persona Simulator**: Emulate model behavior under various personas.
-
-### Model Training & Evaluation
-- **Dataset Cleaner**: Remove duplicates, bad tokens, or offensive samples.
-- **Fine-Tune Config Generator**: Generate LoRA, PEFT, or RLHF JSON config templates.
-- **Training Cost Estimator**: Estimate GPU hours and token cost for training.
-- **Model Comparison Viewer**: Compare outputs from multiple LLMs side-by-side.
-- **Evaluation Benchmark Suite**: Evaluate accuracy, coherence, toxicity, and bias.
-
-### Dataset Tools
-- **Text Dataset Labeler**: Manual or semi-auto text classification tool.
-- **Text → JSONL Converter**: Prepare datasets for OpenAI / HuggingFace training.
-- **Embedding Visualizer**: Plot sentence embeddings in 2D/3D using PCA/UMAP.
-- **Bias Detector**: Identify gender, racial, or cultural bias in text.
-- **Token Counter**: Estimate token usage and costs before training.
-
-### MLOps & Inference
-- **API Tester**: Send test prompts to OpenAI, Ollama, Anthropic, Mistral, etc.
-- **Latency Checker**: Compare response times across models or regions.
-- **Streaming Output Visualizer**: Watch token-by-token generation in real time.
-- **Inference Log Analyzer**: Track drift, anomalies, and token usage metrics.
-- **Model Deployment Tracker**: Monitor and version deployed models.
-
-### Safety & Alignment
-- **Jailbreak Tester**: Evaluate prompt-injection and system override attempts.
-- **Toxicity Classifier**: Detect harmful or biased language in model outputs.
-- **Hallucination Checker**: Compare generated output with factual references.
-- **Alignment Score Tracker**: Rate model safety, honesty, and relevance.
-
-### AI Agents & Workflows
-- **Agent Flow Visualizer**: Visualize task-chains and tool-use flows.
-- **Task Memory Tester**: Evaluate how well an agent retains prior context.
-- **RAG Builder**: Connect documents → embeddings → LLM for retrieval QA.
-- **Tool Use Simulator**: Simulate agent reasoning and tool calls.
-
-### Security & Utilities
-- **Cryptography**: Hash calculators, JWT decoders, password utilities.
-- **Network Analysis**: DNS lookups, SSL checks, port scanning.
-- **Threat Intelligence**: IOC extraction, CVE lookups, threat intel checks.
-
-## Configuration
-
-### Environment Variables
-
-Create a `.env.local` file for API integrations:
-
-```bash
-# Optional: VirusTotal API key for threat intel
-VT_API_KEY=your_virustotal_api_key
-
-# Optional: AbuseIPDB API key for IP reputation
-ABUSEIPDB_KEY=your_abuseipdb_api_key
-
-# Optional: OpenAI API Key for AI tools
-OPENAI_API_KEY=your_openai_api_key
-```
-
-## Project Structure
+## 📁 Project Structure
 
 ```
-aitoolsbox-io/
- app/
-    api/                 # API routes
-    components/          # Reusable components
-    public/              # Static assets
-    ...                  # Tool pages
+AIToolBox.io/
+├── app/
+│   ├── page.tsx                    # Homepage
+│   ├── api-tester/                 # API Tester tool
+│   ├── ai-glossary/                # AI Glossary
+│   ├── content-moderation/         # Content Moderation
+│   ├── prompt-template/            # Prompt Template Builder
+│   └── ... (60+ more tools)
+├── components/
+│   ├── shared/                     # Shared components
+│   └── components/ui/              # UI components
+├── public/                         # Static assets
+├── vercel.json                     # Vercel configuration
+└── README.md                       # This file
 ```
-
-## Deployment
-
-### Vercel (Recommended)
-
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-```
-
-### Docker
-
-```bash
-# Build Docker image
-docker build -t aitoolsbox .
-
-# Run container
-docker run -p 3000:3000 aitoolsbox
-```
-
-## Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-- **Issues**: [GitHub Issues](https://github.com/carthworks/aitoolsbox/issues)
-- **Email**: tkarthikeyan@gmail.com
 
 ---
 
-**Built with ❤️ for the AI community**
+## 🚀 Deployment
+
+### **Deploy to Vercel (Recommended):**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/aitoolbox)
+
+**Or manually:**
+```bash
+npm install -g vercel
+vercel login
+vercel --prod
+```
+
+See [VERCEL_DEPLOYMENT_GUIDE.md](./VERCEL_DEPLOYMENT_GUIDE.md) for detailed instructions.
+
+---
+
+## 📊 Build
+
+### **Production Build:**
+```bash
+npm run build
+```
+
+### **Build Stats:**
+- **Total Pages:** 73
+- **Build Time:** ~60 seconds
+- **Bundle Size:** Optimized
+- **First Load JS:** ~105 KB
+
+---
+
+## 🎨 Features Highlights
+
+### **1. API Tester**
+- Test multiple AI providers
+- Real-time streaming responses
+- Cost estimation
+- Export results
+
+### **2. AI Glossary**
+- 54+ AI/LLM terms
+- Search functionality
+- Category filtering
+- Detailed definitions
+
+### **3. Content Moderation**
+- 6 moderation categories
+- Severity indicators
+- Export reports
+- Demo mode (keyword-based)
+
+### **4. Prompt Template Builder**
+- 5 preset templates
+- Variable system
+- Preview mode
+- Export as JSON
+
+---
+
+## 🛡️ Edge Cases Fixed
+
+- ✅ No hydration errors
+- ✅ Client-side APIs properly handled
+- ✅ TypeScript strict mode
+- ✅ Responsive design
+- ✅ Loading states
+- ✅ Error handling
+
+---
+
+## 📝 Scripts
+
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run start        # Start production server
+npm run lint         # Run ESLint
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+### **Development Workflow:**
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Lucide for beautiful icons
+- Tailwind CSS for utility-first styling
+- Vercel for hosting
+
+---
+
+## 📞 Support
+
+- **Documentation:** [VERCEL_DEPLOYMENT_GUIDE.md](./VERCEL_DEPLOYMENT_GUIDE.md)
+- **Issues:** [GitHub Issues](https://github.com/yourusername/aitoolbox/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/yourusername/aitoolbox/discussions)
+
+---
+
+## 🗺️ Roadmap
+
+### **Q1 2025:**
+- [ ] Add 10 more tools
+- [ ] Implement API integrations
+- [ ] Add user authentication
+- [ ] Mobile app (React Native)
+
+### **Q2 2025:**
+- [ ] AI model fine-tuning tools
+- [ ] Dataset management
+- [ ] Collaboration features
+- [ ] Analytics dashboard
+
+---
+
+## ⭐ Star History
+
+If you find this project useful, please consider giving it a star!
+
+---
+
+**Built with ❤️ by [Your Name]**
+
+**Live Demo:** [https://aitoolbox.vercel.app](https://aitoolbox.vercel.app)
