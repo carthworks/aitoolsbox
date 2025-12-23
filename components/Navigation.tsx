@@ -21,6 +21,7 @@ import {
   Star,
   Key,
   Network,
+  Shield,
   Search,
   FileSearch,
   FlaskConical,
