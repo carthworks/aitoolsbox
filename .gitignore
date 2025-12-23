@@ -94,6 +94,8 @@ Desktop.ini
 .turbo
 *.node_modules
 *.md 
+!README.md
+!LICENSE.md
 
 
 # ============================================

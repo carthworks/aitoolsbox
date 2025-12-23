@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpen, Play, Zap, CheckCircle, ArrowRight, Lightbulb, Code, Sparkles } from "lucide-react";
+import { BookOpen, Play, Zap, CheckCircle, ArrowRight, Lightbulb, Code, Sparkles, Shield } from "lucide-react";
 
 export default function HowToUsePage() {
     return (
@@ -171,6 +171,46 @@ export default function HowToUsePage() {
                                 <div>
                                     <p className="font-semibold text-slate-800">Step 4: Export as JSON</p>
                                     <p className="text-sm text-slate-600">Copy or download your template as JSON for reuse</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Jailbreak Attack Tester */}
+                    <div className="bg-white/80 backdrop-blur rounded-xl p-8 shadow-xl border border-slate-200">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="p-2 bg-red-100 rounded-lg">
+                                <Shield className="w-6 h-6 text-red-600" />
+                            </div>
+                            <h3 className="text-2xl font-bold text-slate-800">Jailbreak Attack Tester</h3>
+                        </div>
+                        <div className="space-y-4">
+                            <div className="flex gap-3">
+                                <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                                <div>
+                                    <p className="font-semibold text-slate-800">Step 1: Select Attack Template</p>
+                                    <p className="text-sm text-slate-600">Choose from common jailbreak techniques like 'DAN', 'Developer Mode', or 'Encoding'</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-3">
+                                <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                                <div>
+                                    <p className="font-semibold text-slate-800">Step 2: Configure Attack</p>
+                                    <p className="text-sm text-slate-600">Enter your target 'harmful' query and customize the injection payload manually if needed</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-3">
+                                <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                                <div>
+                                    <p className="font-semibold text-slate-800">Step 3: Run Simulation or API</p>
+                                    <p className="text-sm text-slate-600">Choose 'Local Simulation' for free educational tests or 'External API' to test against real models (requires API key)</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-3">
+                                <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                                <div>
+                                    <p className="font-semibold text-slate-800">Step 4: Analyze & Export</p>
+                                    <p className="text-sm text-slate-600">Review the pass/fail result, read defense tips, and export a detailed JSON report</p>
                                 </div>
                             </div>
                         </div>

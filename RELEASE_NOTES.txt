@@ -1,0 +1,21 @@
+# Release Notes - v0.2.0 (LLM Security Update)
+
+## 🚀 New Features
+
+### 1. Jailbreak Attack Tester (New Tool)
+- Located under **LLM Security & Red Teaming**.
+- **Capabilities:**
+  - Simulate jailbreak attacks (DAN, Developer Mode, etc.).
+  - Test against local simulation (Free).
+  - Test against OpenAI API (Bring Your Own Key).
+  - Export detailed JSON reports.
+  - Educational defense tips for each attack type.
+
+### 2. Documentation Updates
+- Updated **How to Use** page with a comprehensive guide for the Jailbreak Tester.
+- Added step-by-step instructions for configuring prompts and analyzing results.
+
+## 🛠️ Technical Improvements
+- Added Client-Side API integration with fallback logic.
+- Secure local storage for API keys.
+- Robust error handling for network requests.

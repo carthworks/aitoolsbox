@@ -163,6 +163,41 @@ export default function JailbreakTesterPage() {
         }
     };
 
+    const handleExportReport = () => {
+        const report = {
+            timestamp: new Date().toISOString(),
+            tool: "Jailbreak Attack Tester",
+            mode: executionMode,
+            template: {
+                name: selectedTemplate.name,
+                id: selectedTemplate.id,
+                category: selectedTemplate.category,
+                difficulty: selectedTemplate.difficulty
+            },
+            attack_configuration: {
+                system_prompt: customPrompt,
+                target_query: targetQuery,
+                full_prompt_constructed: `${customPrompt}\n\n${targetQuery}`
+            },
+            result: {
+                status: result.status || "not_run",
+                source: result.source,
+                model_used: executionMode === "api" ? model : "simulated-local-model",
+                response_content: result.response
+            }
+        };
+
+        const blob = new Blob([JSON.stringify(report, null, 2)], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `jailbreak_report_${new Date().getTime()}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    };
+
     const handleRunAttack = async () => {
         setIsSimulating(true);
         setResult({ status: null, response: "", source: "local" });
@@ -214,7 +249,10 @@ export default function JailbreakTesterPage() {
                             <p className="text-slate-500">Test LLM robustness against common alignment bypass techniques</p>
                         </div>
                         <div className="ml-auto flex gap-2">
-                            <button className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-md shadow-sm text-sm font-medium hover:bg-slate-50 text-slate-700">
+                            <button
+                                onClick={handleExportReport}
+                                className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-md shadow-sm text-sm font-medium hover:bg-slate-50 text-slate-700"
+                            >
                                 <Download className="w-4 h-4" /> Export Report
                             </button>
                         </div>
