@@ -1,7 +1,7 @@
-﻿// File: app/layout.tsx (or wherever your RootLayout lives)
+// File: app/layout.tsx (or wherever your RootLayout lives)
 import "./globals.css";
 import Navigation from "@/components/Navigation";
-import { Home, Link } from "lucide-react";
+import ConsoleSignature from "@/components/ConsoleSignature";
 import type { ReactNode } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
@@ -121,10 +121,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="twitter:image" content={metadata.twitter.images[0]} />
         <meta name="twitter:creator" content={metadata.twitter.creator} />
 
-        {/* Favicons / PWA hint (replace with your icons) */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* Favicons / PWA hint */}
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="manifest" href="/site.webmanifest" />
 
         {/* Structured data */}
@@ -134,23 +132,26 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-white text-slate-800">
         <SpeedInsights />
         <Analytics />
+        <ConsoleSignature />
         <Navigation />
         <main className="container-page py-8">{children}</main>
 
         <footer className="border-t border-slate-200 bg-slate-50">
           <div className="container-page py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
-            <p>
-              ⚡ Built for AI engineers. Privacy-focused. All processing runs client-side.
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+              <span>⚡ Built for AI engineers. Privacy-focused. All processing runs client-side.</span>
               <ViewTicker />
-            </p>
-            <div className="flex gap-4">
-              <a href="/" className="hover:bg-slate-50" title="Home" aria-label="Home">
+            </div>
+            <div className="flex flex-wrap items-center gap-4">
+              <a href="/" className="hover:text-slate-900 transition-colors" title="Home" aria-label="Home">
                 Home
               </a>
-              <a href="/about" className="hover:text-slate-700">About</a>
-              <a href="/how-to-use" className="hover:text-slate-700">How to Use</a>
-              <a href="/privacy" className="hover:text-slate-700">Privacy</a>
-              <a href="https://github.com/carthworks" target="_blank" rel="noreferrer" className="hover:text-slate-700">GitHub</a>
+              <a href="/about" className="hover:text-slate-900 transition-colors">About</a>
+              <a href="/contact" className="hover:text-slate-900 transition-colors">Contact</a>
+              <a href="/how-to-use" className="hover:text-slate-900 transition-colors">How to Use</a>
+              <a href="/privacy" className="hover:text-slate-900 transition-colors">Privacy</a>
+              <a href="/terms" className="hover:text-slate-900 transition-colors">Terms</a>
+              <a href="https://github.com/carthworks/aitoolsbox" target="_blank" rel="noreferrer" className="hover:text-slate-900 transition-colors font-medium">GitHub</a>
             </div>
           </div>
         </footer>

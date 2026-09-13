@@ -76,7 +76,7 @@ export default function ViewTicker() {
             <div className="inline-block whitespace-nowrap animate-marquee">
               <span className="px-2">Your IP (masked):</span>
               <span className="font-mono px-1">{maskedIp}</span>
-              <span className="px-2">• Thanks for visiting SecuTools ⚡</span>
+              <span className="px-2">• Thanks for visiting AIToolBox.io ⚡</span>
             </div>
           )}
           {!ip && !error && <div className="text-slate-400">Fetching IP…</div>}

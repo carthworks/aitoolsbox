@@ -31,7 +31,6 @@
     "react-syntax-highlighter": "^16.1.0",
     "shadcn-ui": "^0.9.5",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss": "^12.23.22",
     "tailwindcss-animate": "^1.0.7",
     "zod": "3.23.8"
   },
